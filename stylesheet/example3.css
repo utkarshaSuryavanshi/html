@@ -1,0 +1,84 @@
+header{
+    background-color:#fff ;
+    color:black;
+    padding: 20px 0;
+}
+.Container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header h1 {
+    margin:0 ;
+}
+nav ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a{
+    color:#333;
+    text-decoration: none;
+}
+.hero{
+     background-color:#f4f4f4;
+     padding:80 px ;
+     margin-inline: center;
+}
+.hero h2{
+
+margin-top: 0;
+
+
+}
+.btn {
+    background-color:white;
+    color:#333 ;
+    padding: 10px 20;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.btn:hover{
+    DC :red;
+}
+.features{
+    padding: 40px 0;
+}
+.features h2{
+    margin-top: 0;
+}
+.features{
+    margin-top: 0px;
+}
+.pricing{
+    background-color: #f4f4f4;
+    padding: 0 18px;
+}
+.plan{
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow:0px  0px 10 px .1px;
+    text-align: center;
+    }
+.plane h3{
+    margin-top: 0px;
+    text-align: center;
+}
+.plan ul{
+list-style: type none;
+padding: 0px;
+text-align: center;
+
+}
+footer{
+    background-color: #333;
+    color:white;
+    padding: 20px 0;
+    text-align: center;
+}

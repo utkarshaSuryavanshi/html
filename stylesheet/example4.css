@@ -1,0 +1,42 @@
+header{
+    background-color:#fff ;
+    color:black;
+    padding: 20px 0;
+}
+.Container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header h1 {
+    margin:0 ;
+}
+nav ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a{
+    color:#333;
+    text-decoration: none;
+}
+header h2{
+    text-align: center;
+}
+header p {
+    text-align: center;
+}
+section{
+    text-align: center;
+}
+footer{
+    background-color:white;
+    color:black;
+    padding: 20px 0;
+    text-align: center;
+}

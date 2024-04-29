@@ -1,0 +1,22 @@
+body{
+    background: "launder";
+    text-align: center;
+}
+h2{
+    font-style: italic;
+    color: pink;
+    font-size: 40 px;
+}
+p{
+    font-size: 20px;
+}
+.Red{
+    color: red;
+}
+.Blue{
+    color:blue;
+}
+.Green{
+    color:green;
+}
+

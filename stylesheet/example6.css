@@ -1,0 +1,43 @@
+body,html {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: aqua;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+main {
+    padding: 20px;
+
+}
+
+.galary {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax (250px, fr));
+    gap: 20px;
+}
+
+.photo {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0, 2px 4px rgba(0,0,0, 0, 0.1);
+
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+
+    transform: scale(1.1);
+}
