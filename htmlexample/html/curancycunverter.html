@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    
+</head>
+<style>
+    .container {
+    text-align: center;
+}
+
+.converter {
+    margin-bottom: 20px;
+}
+
+.result {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <div class="converter">
+            <input type="number" id="amount" placeholder="Enter amount">
+            <select id="from">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="GBP">INR</option>
+            </select>
+            <span>to</span>
+            <select id="to">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="GBP">INR</option>
+            </select>
+            <button id="convert">Convert</button>
+        </div>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>const convertButton = document.getElementById('convert');
+        const amountInput = document.getElementById('amount');
+        const fromSelect = document.getElementById('from');
+        const toSelect = document.getElementById('to');
+        const resultDiv = document.getElementById('result');
+        
+        const API_KEY = 'YOUR_API_KEY';
+const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest`;
+
+        
+        async function convertCurrency() {
+            const amount = amountInput.value;
+            const fromCurrency = fromSelect.value;
+            const toCurrency = toSelect.value;
+        
+            try {
+                const response = await fetch(`${API_URL}/${fromCurrency}`);
+                const data = await response.json();
+        
+                if (data.conversion_rates) {
+                    const rate = data.conversion_rates[toCurrency];
+                    const result = amount * rate;
+                    resultDiv.textContent = `${amount} ${fromCurrency} equals ${result.toFixed(2)} ${toCurrency}`;
+                } else {
+                    resultDiv.textContent = 'Failed to convert currency. Please try again.';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.textContent = 'Convert  To Currency Successful.';
+            }
+        }
+        
+        convertButton.addEventListener('click', convertCurrency);
+        </script>
+</body>
+</html>

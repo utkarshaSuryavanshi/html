@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .chessbord{
+        border: 2px solid black;
+        width: 60%;
+        height: 75%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .chessbord div{
+        height:60px;
+        width:60px;
+        width: 10%;
+        width: calc(100% / 8);
+        font-size: 40px;
+        text-align: center;
+        text-shadow: 2px 1px wheat;
+    }
+    .a{
+        background-color: white;
+    }
+    .b{
+        background-color: black;
+    }
+</style>
+<body>
+    <div class="chessbord">
+        <div class="a">&#9820;</div>
+        <div class="b">&#9822;</div>
+        <div class="a">&#9821;</div>
+        <div class="b">&#9818;</div>
+        <div class="a">&#9819;</div>
+        <div class="b">&#9821;</div>
+        <div class="a">&#9822;</div>
+        <div class="b">&#9820;</div>
+
+        <div class="b">&#9823;</div>
+        <div class="a">&#9823;</div>
+        <div class="b">&#9823;</div>
+        <div class="a">&#9823;</div>
+        <div class="b">&#9823;</div>
+        <div class="a">&#9823;</div>
+        <div class="b">&#9823;</div>
+        <div class="a">&#9823;</div>
+
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="a"></div>
+
+        <div class="a">&#9823;</div>
+        <div class="b">&#9823;</div>
+        <div class="a">&#9823;</div>
+        <div class="b">&#9823;</div>
+        <div class="a">&#9823;</div>
+        <div class="b">&#9823;</div>
+        <div class="a">&#9823;</div>
+        <div class="b">&#9823;</div>
+
+        <div class="b">&#9820;</div>
+        <div class="a">&#9822;</div>
+        <div class="b">&#9821;</div>
+        <div class="a">&#9818;</div>
+        <div class="b">&#9819;</div>
+        <div class="a">&#9821;</div>
+        <div class="b">&#9822;</div>
+        <div class="a">&#9820;</div>
+    </div>
+
+    <script>
+        let selectedPiece = null;
+        const squares = document.querySelectorAll('.chessbord div');
+
+        squares.forEach(square => {
+            square.addEventListener('click', () => {
+                if (selectedPiece) {
+                    selectedPiece.classList.remove('selected');
+                    if (square.innerHTML === '') {
+                        square.innerHTML = selectedPiece.innerHTML;
+                        selectedPiece.innerHTML = '';
+                        selectedPiece = null;
+                    } else {
+                        selectedPiece = null;
+                    }
+                } else if (square.innerHTML !== '') {
+                    selectedPiece = square;
+                    selectedPiece.classList.add('selected');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    class Student {
+      constructor(id, name) {
+        this.id = id;
+        this.name = name; 
+      }
+    }
+    
+    const students = [
+      new Student(101, "ABC"), 
+      new Student(102, "DEF"), 
+      new Student(103, "GHI"),
+      new Student(104, "JKL"),
+      new Student(104, "MNO"),
+      new Student(104, "PQR"),
+      new Student(104, "STU"),
+      new Student(104, "VWX"),
+      new Student(104, "YZA"),
+      new Student(104, "UTA")
+    ];
+    
+    students.forEach(student => {
+      document.write(student.id + ": " + student.name + "<br>"); 
+    });
+    //notes//
+    //notificatio bar student//
+    //blog website html css js//
+    //random quze ganreter//
+
+
+    </script>
+    
+    
+</script>
+</body>
+</html>

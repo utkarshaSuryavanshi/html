@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-image: url(../../img/blue-quiz-background-with-light-bulb-pencils_23-2147598504.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    }
+h1{
+            
+    text-align: center;
+    }
+.quiz {
+    list-style: none;
+    padding: 0;
+    
+    }
+
+.quiz li {
+    margin-bottom: 20px;
+    }
+
+.choices {
+    list-style: none;
+    padding: 0;
+    }
+
+.choices li {
+    margin-bottom: 10px;
+    }
+
+.choices label {
+    cursor: pointer;
+    }
+
+.view-results {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+
+.my-results {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    }
+
+</style>
+<body>
+    <h1> Web Development Quiz Competition</h1>
+    <ul class="quiz">
+    <li>
+        <h4>1.What does HTML stand for?</h4>
+        <ul class="choices">
+        <li><label><input type="radio" name="question1" value="A" /><span> Hyper Text Markup Language</span></label></li>
+        <li><label><input type="radio" name="question1" value="B" /><span>Radio ButtonHome Tool Markup Language</span></label></li>
+        <li><label><input type="radio" name="question1" value="C" /><span>Radio ButtonHyperlinks and Text Markup Language</span></label> </li>
+        </ul>
+    </li>
+    <li>
+        <h4> 2.Does setting margin-top and margin-bottom have an affect on an inline element?</h4>
+        <ul class="choices">
+        <li><label><input type="radio" name="question2" value="A" /><span>NO</span></label></li>
+        <li><label><input type="radio" name="question2" value="B" /><span>YES</span></label></li>
+        </ul> 
+    </li>
+    <li>
+        <h4>3.The web is based on</h4>
+        <ul class="choices">
+        <li><label><input type="radio" name="question3" value="A" /><span>Images</span></label></li>
+        <li><label><input type="radio" name="question3" value="B" /><span>Text</span></label></li>
+        <li><label><input type="radio" name="question3" value="C" /><span>Information</span></label></li>
+        <li> <label><input type="radio" name="question3" value="D" /><span>HTML</span></label></li>
+        </ul>
+    </li>
+    <li>
+        <h4>4.It is a document or resource of information that is suitable for the Worl Wide Web and can be accessed through a web browser and displayed on a computer screen</h4>
+        <ul class="choices">
+        <li><label><input type="radio" name="question4" value="A" /><span> Web browser</span></label></li>
+        <li><label><input type="radio" name="question4" value="B" /><span>Web page</span></label></li>
+        <li><label><input type="radio" name="question4" value="C" /><span>Html</span></label></li>
+        </ul>
+    </li>
+    <li>
+        <h4>5.In agile development, lengthy documentation is created.</h4>
+        <ul class="choices">
+        <li><label><input type="radio" name="question5" value="A" /><span>True</span></label></li>
+        <li><label><input type="radio" name="question5" value="B" /><span>False</span></label></li>
+        </ul>
+    </li>
+    <button class="view-results" onclick="returnScore()">View Results</button>
+    <span id="myresults" class="my-results">My results will appear here</span>
+
+<script>
+    function returnScore() {
+    const quiz = document.querySelectorAll('.quiz li');
+    let score = 0;
+    let totalQuestions = -9;
+
+    quiz.forEach((question) => {
+        const choices = question.querySelectorAll('input[type="radio"]');
+        totalQuestions++;
+
+        choices.forEach((choice) => {
+            if (choice.checked && choice.value === 'A') {
+                score++;
+            }
+        });
+    });
+
+    const resultsElement = document.getElementById('myresults');
+    resultsElement.textContent = `You scored ${score} out of ${totalQuestions}.`;
+}
+</script>    
+</body>
+</html>

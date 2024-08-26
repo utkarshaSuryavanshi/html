@@ -1,0 +1,233 @@
+ body{
+        background-image: url(./image/Digital\ portfolio.webp); 
+         background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-position: center
+    
+        }
+    
+        .dotted {
+             width: 150px;
+            height: 30px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px dotted;
+            border-color: rgb(230, 60, 31); 
+        }
+    
+        .dashed {
+             border: 2px dashed;
+            border-color: brown; 
+        }
+    
+        .solid {
+             border: 2px solid;
+            border-color: rgb(7, 1, 1); 
+        }
+    
+        .double {
+             border: 4px double;
+            border-color: rgb(240, 18, 18); 
+        }
+    
+        .groove {
+             border: 4px groove;
+            border-color: rgb(14, 186, 132); 
+        }
+    
+        .ridge {
+            border: 4px ridge;
+            border-color: rgb(186, 14, 131);
+        } 
+        .inset {
+             border: 4px inset;
+            border-color: rgb(225, 143, 11);
+        } 
+    
+        .outset {
+             border: 4px outset;
+            border-color: rgb(225, 143, 11); 
+        }
+    
+        .thin-border {
+             border: 2px solid #ff0000; 
+        }
+    
+        .medium-border {
+            border: 4px solid #ff0000; 
+        }
+    
+        .thick-border {
+            border: 6px solid #ff0000; 
+        }
+    
+        .custom-border {
+             border: 3px solid #ff0000; 
+        }
+    
+        .my-element {
+            border: 2px solid #333;
+            height: 100px;
+            width: 200px;
+            transition: border color 0.5s; 
+        }
+    
+        .my-element:hover {
+             color: blue; 
+        }
+    
+        div {
+         padding: 50px;
+            margin: 20px;
+            border: 6px ridge red;
+            width: 300px;
+            height: 150px;
+            float: left; 
+        }
+    
+        p {
+            font-size: 25px; 
+        }
+    
+        #one {
+             border-radius: 90px;
+            background: lightgreen; 
+        }
+    
+        #two {
+             border-radius: 25% 10%;
+            background: rgb(209, 105, 48);
+        } 
+        #three {
+             border-radius: 35px 10em 10%;
+            background: rgb(200, 122, 86);
+        } 
+        
+    
+        #four {
+             border-radius: 50px 50em 50% 50cm;
+            background: rgb(142, 136, 231); 
+        }
+    
+        #left {
+             border-top-left-radius: 250px;
+            background: lightgreen;
+            padding: 50px;
+            border: 6px ridge;
+            height: 300px;
+            width: 200px;
+            font-size: 25px 
+        }
+    
+        #left1 {
+             border-top-right-radius: 50%;
+            background: lightgreen;
+            padding: 50px;
+            border: 6px ridge;
+            height: 300px;
+            width: 200px;
+            font-size: 25px 
+        }
+    
+        #left2 {
+            border-bottom-right-radius: 50%;
+            background: lightgreen;
+            padding: 50px;
+            border: 6px ridge;
+            height: 300px;
+            width: 200px;
+            font-size: 25px
+        } 
+    
+        #left3 {
+            border-bottom-left-radius: 50%;
+            background: lightgreen;
+            padding: 50px;
+            border: 6px ridge;
+            height: 300px;
+            width: 200px;
+            font-size: 25px 
+        }
+        #left4 {
+             border-radius: 10% 50%;
+            background: lightgreen;
+            padding: 50px;
+            margin: 20px;
+            border: 6px ridge;
+            height: 175px;
+            width: 200px;
+            font-size: 25px 
+        }
+        #left5 {
+            border-radius: 120px/100px 10px;
+            background: lightgreen;
+            padding: 50px;
+            margin: 20px;
+            border: 6px ridge;
+            height: 175px;
+            width: 200px;
+            font-size: 25px 
+        }
+        #left6 {
+            border-radius: 50% 10em/10% 20em;
+            background: lightgreen;
+            padding: 50px;
+            margin: 20px;
+            border: 6px ridge;
+            height: 175px;
+            width: 200px;
+            font-size: 25px
+        } 
+        #left7 {
+            border-radius: 100px 10em 120px/30em;
+            background: lightgreen;
+            padding: 50px;
+            margin: 20px;
+            border: 6px ridge;
+            height: 175px;
+            width: 200px;
+            font-size: 25px 
+        }
+        p{
+             display: inline;
+            display: inline block;
+            display: block;
+            display: run-in;
+            display: none; 
+         display: flex;
+            display: inline flex; 
+        }
+        .wait{
+             cursor: wait; 
+        } 
+         body{
+            width: 90%;
+        }
+        h1{
+            color: red;
+            text-align: center;
+        }
+        li:hover{
+            cursor: grab;
+        }  
+        .cursor{
+            cursor: crosshair;
+        } 
+         .my-button {
+            background-color: aqua;
+            padding: 10px 20px;
+            border: none;
+        }
+    
+        .my-button:active {
+            background-color: rgb(50, 186, 109);
+        }
+    
+        .small-button {
+            font-size: 10px;
+            padding: 50x 10px;
+        } 
+        .button{
+            box-shadow: 10%;
+            transition: 0.3 ease;
+        }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+    //abstrac class//
+    class Vehicle {
+        constructor(make, model) {
+            this.make = make;
+            this.model = mode
+        }
+
+        getMake() {
+            return this.make;
+        }
+
+        setMake(make) {
+            this.make = make;
+        }
+
+        getModel() {
+            return this.model;
+        }
+
+        setModel(model) {
+            this.model = model;
+        }
+        getType() {
+            return "Vehicle";
+        }
+        start() {
+            return "Starting"+""+ this.getType()+""+this.make+""+this.model;
+        }
+    }
+    class ElectricCar extends Vehicle {
+        constructor(make, model, range) {
+            super(make, model); 
+            this.range = range;
+        }
+        getType() {
+            return "Electric Car";
+        }
+        charge() {
+            return "Charging"+""+this.make+""+this.model;
+        }
+    }
+    class GasolineCar extends Vehicle {
+        constructor(make, model, fuelType) {
+            super(make, model); 
+            this.fuelType = fuelType;
+        }
+        getType() {
+            return "Gasoline Car";
+        }
+        refuel() {
+            return "Refueling " + this.make + " " + this.model;
+        }
+    }
+    var c1 = new ElectricCar("Tesla", "Model S", 300);
+    var c2 = new GasolineCar("Honda", "Civic", "Petrol");
+
+    document.write(c1.start() + "<br>");
+    document.write(c2.start());
+</script>
+
+</body>
+</html>

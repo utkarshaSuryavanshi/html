@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #qrcode {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #00b7ff;
+            color: aliceblue;
+            border: none;
+            box-shadow: 5px 5px 10px black;
+            transition: all 1s ease-in-out;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body>
+    <h1>QR Code Generator for Google Form</h1>
+    <canvas id="qrcode"></canvas>
+    <button onclick="generateQRCode()">Generate QR Code</button>
+    <script>
+        function generateQRCode() {
+            var qr = new QRious({
+                element: document.getElementById('qrcode'),
+                value: 'https://docs.google.com/forms/d/1KZizw8dxUuqwQEPntXMGrPP4uvHRPgenEqpSLHksmQ8/edit',
+                size: 128
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,black,rgb(58, 2, 58), black);
+    margin: 0;
+    padding: 0;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #575a5a;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    border-radius: 20px; 
+    border-style: ridge;
+    border: 5px solid purple; 
+    color: purple;
+
+}
+h1{
+    text-align: center;
+    color: #fff;
+}
+legend{
+    background-color: black;
+   
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:350px; 
+    padding-top: 40px;
+}
+.circular-image {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin: 10px; 
+    border: 5px solid purple; 
+
+}
+.image-container1{
+padding-left:110px;
+}
+.image-container2{
+margin-bottom:30px;
+padding-left: 200px;
+}
+.image-container3{
+   top:280px;
+padding-left: 30px;
+position: absolute;
+}
+aside{
+    color: #fff;
+    padding: left 500spx;
+}
+fieldset{
+    padding-right: 100cqb;
+    height: 400px;
+}
+ul{
+   margin-top:-250px;
+    padding-left:600px;
+    color: purple;
+
+}
+.player,button{
+    color: purple;
+    border-radius: 10px;
+    border-color: purple;
+    height: 30px;
+    
+    
+}
+
+</style>
+<body>
+        <h1>Leaderboard</h1>
+    
+        <legend>
+        <div class="button-container">
+            <button class="button">All Time</button>
+            <button class="button">Monthly</button>
+            <button class="button">Today</button>
+        </div>
+    </legend>
+    <div class="image-container1">
+        <img src="../../img/download (2).jpg" alt="Image 1" class="circular-image">
+    </div>
+    <div class="image-container2">
+        <img src="../../img/download (1).jpg" alt="Image 2" class="circular-image">
+    </div>
+    <div class="image-container3">
+        <img src= "../../img/download.jpg" alt="Image 3" class="circular-image">
+    </div>
+   <aside>
+    <div class="player">
+    <ul>
+        <button><li><i class="fa-solid fa-user"></i> 4 Sakshi 890  runs</li></button><br><br>
+        <button><li><i class="fa-solid fa-user"></i> 5 Saumya 850  runs</li></button><br><br>
+        <button><li><i class="fa-solid fa-user"></i> 6 Shaurya 820 runs</li></button><br><br>
+        <button><li><i class="fa-solid fa-user"></i> 7 Roha    695 runs</li></button><br><br>
+        <button><li><i class="fa-solid fa-user"></i> 8 Mandeep 690 runs</li></button><br><br>
+            <button> <li><i class="fa-solid fa-user"></i> 9 Aasiya 650 runs</li></button><br><br>
+        <button >Show All</button>
+    </ul>
+    
+    </div>
+   </aside>
+</body>
+</html>

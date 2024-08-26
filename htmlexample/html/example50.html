@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Button</title>
+</head>
+<body>
+    <label for="no">Cube number:</label><br>
+    <input type="text" id="no" name="no"><br>
+    <button id="cubeButton">Click</button>
+    
+    <script>
+        function getCube(number) {
+            return number * number * number;
+        }
+        
+        var button = document.getElementById("cubeButton");
+        button.addEventListener("click", function() {
+            var inputNumber = document.getElementById("no").value;
+            var cube = getCube(parseInt(inputNumber)); 
+            alert("The cube of " + inputNumber + " is " + cube);
+        });
+    </script>
+</body>
+</html>
+
+    
+>

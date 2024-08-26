@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: darkslategray;
+    }
+#Birthdayform {
+    margin-bottom: 20px;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#birthdayList {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    padding: 8px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+</style>
+<body>
+    <h1>Birthday Reminder</h1>
+    <form id="Birthdayform">
+        <label for="name">Name:</label>
+        <input type="text" id="name"required>
+        <label for="date">Date:</label>
+        <input type="date" id="date"required>
+        <button type="button" onclick="addBirthday()">AddBirthday</button>
+    </form>
+    <ul id ="birthdayList"></ul>
+    <script>
+        function addBirthday() {
+            alert("Today is Birthday");
+    var name = document.getElementById("name").value;
+    var date = document.getElementById("date").value;
+
+    var li = document.createElement("li");
+    li.textContent = name + " - " + date;
+
+    document.getElementById("birthdayList").appendChild(li);
+
+    document.getElementById("name").value = "";
+    document.getElementById("date").value = "";
+}
+
+    </script>
+</body>
+</html>
